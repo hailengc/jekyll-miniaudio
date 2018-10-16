@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["hailong"]
   spec.email         = ["hailengc@gmail.com"]
 
-  spec.summary       = %q{A mini audio palyer as Jekyll plugin}
-  spec.description   = %q{A mini audio palyer as Jekyll plugin}
+  spec.summary       = %q{A mini audio palyer plugin for Jekyll}
+  spec.description   = %q{A mini audio palyer plugin for Jekyll}
   spec.homepage      = "https://github.com/hailengc/jekyll-miniaudio"
   spec.license       = "MIT"
 
@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_dependency 'jekyll', '~> 3.8', '>= 3.8.3'
 end
