@@ -1,29 +1,29 @@
-require "jekyll"
+require 'jekyll'
 require 'fileutils'
+require_relative 'miniaudio/version'
 
 class MiniAudio < Liquid::Tag
   def initialize(tag_name, audio_url, options)
-     super
-     @audio_url = audio_url
-    #  p tag_name
-    #  p audio_url
-    #  p options
+    super
+    @audio_url = audio_url
   end
 
-  def render(context)
-    # Liquid::Context
-    # p context.class
-    dest_asset_path = File.join Dir.pwd, "assets", "miniaudio"
-    puts dest_asset_path
-    if !Dir.exist?(dest_asset_path)
-      # copy assets
-      puts "starting copy assets..."
-      puts __FILE__
-      src_asset_path = File.join File.dirname(File.absolute_path(__FILE__)), "miniaudio", "h5audio"
-      puts src_asset_path
+  def render(_context)
+    # check assets exist or not
+    dest_asset_path = File.join Dir.pwd, 'assets', "miniaudio-#{Jekyll::Miniaudio::VERSION}"
+    ma_path = File.join File.expand_path(__dir__), 'miniaudio'
+    unless Dir.exist?(dest_asset_path)
+      src_asset_path = File.join ma_path, 'h5audio'
       FileUtils.cp_r(src_asset_path, dest_asset_path)
     end
-  end 
+
+    template = File.read(File.join(ma_path, 'h5audio', 'template.html'))
+    Liquid::Template.parse(template).render(
+      'audioSrc' => @audio_url, 
+      'assets_path' => "/assets/miniaudio-#{Jekyll::Miniaudio::VERSION}",
+      'id' => Random.rand.to_s
+      )
+  end
 end
 
 Liquid::Template.register_tag('miniaudio', MiniAudio)
