@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div>hello ,this is miniaudo ... testing...</div>
     <div id="ma-container" class="ma-container">
         <audio class="ma-audio" src="demo.mp3">
             <p>Your brower is too old, it does not support html5 audio play.</p>
@@ -25,8 +26,8 @@
                 </div>
             </div>
             <div class="progress-panel">
-                <span class="current-time" style="display: none">00:00</span>
-                <span class="duration-time">00:00</span>
+                <span class="current-time">00:00</span>
+                <span class="duration-time" style="display: none">00:00</span>
             </div>
             <div class="button-stop">
                 <img src="assets/stop.svg" alt="play-button">
@@ -35,7 +36,7 @@
                 <img src="assets/loop.svg" alt="play-button">
             </div>
             <div class="info-panel">
-                Song written by: David Bowie.
+                <div><span class="title">Title</span></div>
             </div>
             <div class="volume-up">
                 <img src="assets/volume-up.svg" alt="play-button">
@@ -47,7 +48,7 @@
     </div>
     <script src="miniAudio.js"></script>
     <script>
-        var h5Audio = new MiniAudio('ma-container');
+        var h5Audio = new MiniAudio('ma-container', '');
     </script>
 </body>
 
