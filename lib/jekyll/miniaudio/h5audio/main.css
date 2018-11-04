@@ -2,8 +2,7 @@
   width: 350px;
   height: 80px;
   margin: 20px auto;
-  /* border: 0px solid lightgrey; */
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 0.8em;
   background-image: linear-gradient(#eaf6fa, skyblue);
 }
@@ -54,7 +53,6 @@
 .progress-bar .brick {
   position: absolute;
   left: 0px;
-  /* opacity: 0.5; */
   width: 10px;
   height: 10px;
   border-radius: 50%;
