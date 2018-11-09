@@ -27,11 +27,11 @@ This plugin is a [Jekyll Tag](https://jekyllrb.com/docs/plugins/tags/), you just
 
   `{% miniaudio 'https://somewhere/themusic.mp3' %}`
 
-- Use with file path. For example if you have a demo.map located in your assets/music folder, then just put:
+- Use with file path. For example if you have a demo.ma3 located in your assets/music folder, then just put:
 
   `{% miniaudio '/assets/music/demo.mp3' %}`
 
-  **Ensure your file is accessible via http(s)://YOUR_HOST/assets/demo.mp3**
+  ** Note: Ensure your file is accessible via http(s)://YOUR_HOST/assets/demo.mp3**
 
 ## Issues and feature requests
 
