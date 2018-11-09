@@ -6,11 +6,11 @@ require "jekyll/miniaudio/version"
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-miniaudio"
   spec.version       = Jekyll::Miniaudio::VERSION
-  spec.authors       = ["hailong"]
+  spec.authors       = ["hailengc"]
   spec.email         = ["hailengc@gmail.com"]
 
-  spec.summary       = %q{A mini audio palyer plugin for Jekyll}
-  spec.description   = %q{A mini audio palyer plugin for Jekyll}
+  spec.summary       = %q{A minimal audio plugin for Jekyll}
+  spec.description   = %q{A minimal audio plugin for Jekyll, with HTML5 audio elemnt.}
   spec.homepage      = "https://github.com/hailengc/jekyll-miniaudio"
   spec.license       = "MIT"
 
