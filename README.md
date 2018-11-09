@@ -6,7 +6,7 @@ The implementation is based on [HTML5 audio element](https://www.w3schools.com/h
 
 Audio formats support also depends on browsers, but generally mp3, wav, ogg are supported.
 
-See [Live Demo](https://hailengc.github.io/jekyll-miniaudio/index.html)
+See [Live Demo](https://hailengc.github.io/jekyll-miniaudio)
 
 ## Installation
 
