@@ -1,38 +1,45 @@
 # Jekyll::Miniaudio
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/miniaudio`. To experiment with that code, run `bin/console` for an interactive prompt.
+A minimal audio plugin for [Jekyll](https://jekyllrb.com/).
 
-TODO: Delete this and the text above, and describe your gem
+The implementation is based on [HTML5 audio element](https://www.w3schools.com/html/html5_audio.asp) (without fallback support for flash), so a morden browser is expected.
+
+Audio formats support also depends on browsers, but generally mp3, wav, ogg are supported.
+
+See [Live Demo](https://hailengc.github.io/jekyll-miniaudio/index.html)
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'jekyll-miniaudio'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-miniaudio
+- In your Jekyll project's Gemfile:
+  ```ruby
+    group :jekyll_plugins do
+        ...   # other plugins
+        jekyll-miniaudio # add here
+    end
+  ```
+  then `bundle install`.
 
 ## Usage
 
-TODO: Write usage instructions here
+This plugin is a [Jekyll Tag](https://jekyllrb.com/docs/plugins/tags/), you just pass either an audio link or file path.
 
-## Development
+- Use with audio link:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+  `{% miniaudio 'https://somewhere/themusic.mp3' %}`
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- Use with file path. For example if you have a demo.map located in your assets/music folder, then just put:
+
+  `{% miniaudio '/assets/music/demo.mp3' %}`
+
+  **Ensure your file is accessible via http(s)://YOUR_HOST/assets/demo.mp3**
+
+## Issues and feature requests
+
+Feel free to create issues or send me email hailengc@gmail.com.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-miniaudio.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hailengc/jekyll-miniaudio.
 
 ## License
 
